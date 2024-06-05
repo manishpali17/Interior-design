@@ -1,8 +1,5 @@
 "use client"
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { SVGProps } from "react";
 import { CardContainer, CardItem } from "./3dCard";
 import {
@@ -13,6 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Contact from "./contact";
 
 
 interface IconProps extends SVGProps<SVGSVGElement> {}
@@ -96,14 +94,14 @@ export default function Component() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link
-                href="#"
+                href="#contact"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-[#1e88e5] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#1565c0] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#1e88e5] disabled:pointer-events-none disabled:opacity-50 dark:bg-[#ccc] dark:text-[#333] dark:hover:bg-[#bbb]"
                 prefetch={false}
               >
                 Get a Quote
               </Link>
               <Link
-                href="#"
+                href="#services"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-[#ddd] bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#f2f2f2] hover:text-[#333] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#1e88e5] disabled:pointer-events-none disabled:opacity-50 dark:border-[#444] dark:bg-[#333] dark:hover:bg-[#444] dark:hover:text-[#ccc]"
                 prefetch={false}
               >
@@ -113,7 +111,10 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <section className="w-full py-6 bg-[#f2f2f2] dark:bg-[#333]">
+      <section
+        id="services"
+        className="w-full py-6 bg-[#f2f2f2] dark:bg-[#333]"
+      >
         <div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-3 lg:gap-12">
           <div className="grid gap-4 shadow-lg p-2 rounded-lg">
             <BrushIcon className="h-12 w-12 text-[#1e88e5] dark:text-[#ccc]" />
@@ -141,7 +142,10 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <section className="w-full py-6 bg-[#f2f2f2] dark:bg-[#333]">
+      <section
+        id="projects"
+        className="w-full py-6 bg-[#f2f2f2] dark:bg-[#333]"
+      >
         <div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#1e88e5]">
@@ -202,48 +206,7 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-[#f2f2f2] dark:bg-[#333]">
-        <div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#1e88e5]">
-              Get in Touch
-            </h2>
-            <p className="max-w-[600px] text-[#666] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-[#ccc]">
-              Fill out the form below to schedule a consultation and learn more
-              about our interior design services.
-            </p>
-          </div>
-          <form className="space-y-4">
-            <div className="grid grid-cols-2 gap-4 ">
-              <Input
-                type="text"
-                placeholder="Name"
-                className="max-w-lg flex-1 bg-[#f2f2f2] border-[#ddd] dark:bg-[#444] dark:border-[#666] focus:ring-[#1e88e5] focus:border-[#1e88e5]"
-              />
-              <Input
-                type="email"
-                placeholder="Email"
-                className="max-w-lg flex-1 bg-[#f2f2f2] border-[#ddd] dark:bg-[#444] dark:border-[#666] focus:ring-[#1e88e5] focus:border-[#1e88e5]"
-              />
-            </div>
-            <Input
-              type="text"
-              placeholder="Project Description"
-              className="max-w-full flex-1 bg-[#f2f2f2] border-[#ddd] dark:bg-[#444] dark:border-[#666] focus:ring-[#1e88e5] focus:border-[#1e88e5]"
-            />
-            <Textarea
-              placeholder="Additional Details"
-              className="max-w-full flex-1 bg-[#f2f2f2] border-[#ddd] dark:bg-[#444] dark:border-[#666] focus:ring-[#1e88e5] focus:border-[#1e88e5]"
-            />
-            <Button
-              type="submit"
-              className="w-full max-w-full bg-[#1e88e5] text-white hover:bg-[#1565c0] focus:ring-[#1e88e5] dark:bg-[#ccc] dark:text-[#333] dark:hover:bg-[#bbb]"
-            >
-              Submit
-            </Button>
-          </form>
-        </div>
-      </section>
+      <Contact />
     </main>
   );
 }

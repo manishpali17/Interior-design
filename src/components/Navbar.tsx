@@ -4,10 +4,10 @@ import { ModeToggle } from "./modetoggle";
 
 export default function Header() {
   const navItems = [
-    { href: "#", label: "Services" },
-    { href: "#", label: "Projects" },
+    { href: "#services", label: "Services" },
+    { href: "#projects", label: "Projects" },
     { href: "#", label: "About" },
-    { href: "#", label: "Contact" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (

@@ -60,6 +60,7 @@ export async function createContact(prevState: State, formData: FormData) {
     console.error(error);
     return {
       status:"ERROR",
+      errors:{},
       timestamp:Date.now(),
       message: "Opps, something went wrong. Please try again later.",
     };

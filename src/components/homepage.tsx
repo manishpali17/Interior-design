@@ -147,7 +147,7 @@ export default function Component() {
         className="w-full py-6 bg-[#f2f2f2] dark:bg-[#333]"
       >
         <div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
-          <div className="space-y-2">
+          <div className="space-y-2 md:flex md:flex-col md:justify-center ">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#1e88e5]">
               Explore Our Past Projects
             </h2>

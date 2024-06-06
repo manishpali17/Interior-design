@@ -21,9 +21,11 @@ export default function Contact() {
     if (state.message) {
       if (state.status === "SUCCESS") {
         toast(state.message);
+      }else {
+        toast(state.message);
       }
     }
-  });
+  }, [state]);
   return (
     <section className="w-full py-12 md:py-24 lg:py-32  dark:bg-[#333]">
       <div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
